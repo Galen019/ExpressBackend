@@ -4,18 +4,18 @@ import tseslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
 
 export default [
-  {
-    files: ["**/*.{js,mjs,cjs,ts}"],
-    languageOptions: {
-      globals: globals.browser,
-      parser: tsParser,
+    {
+        files: ["**/*.{js,mjs,cjs,ts}"],
+        languageOptions: {
+            globals: globals.browser,
+            parser: tsParser,
+        },
+        plugins: {
+            "@typescript-eslint": tseslint,
+        },
+        rules: {
+            ...pluginJs.configs.recommended.rules,
+            ...tseslint.configs.recommended.rules,
+        },
     },
-    plugins: {
-      "@typescript-eslint": tseslint,
-    },
-    rules: {
-      ...pluginJs.configs.recommended.rules,
-      ...tseslint.configs.recommended.rules,
-    },
-  },
 ];
