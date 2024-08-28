@@ -1,5 +1,5 @@
 import { DataTypes } from "sequelize";
-import sqLite from "config/sequelize";
+import sqLite from "config/sqLite";
 
 // Define the User model
 const Player = sqLite.define("Player", {

@@ -1,4 +1,4 @@
-import sqLite from "../config/sequelize";
+import sqLite from "config/sqLite";
 import "./playerModel";
 
 // Sync all models with the database
