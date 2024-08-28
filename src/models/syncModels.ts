@@ -1,10 +1,10 @@
-import sequelize from "../config/sequelize";
+import sqLite from "../config/sequelize";
 import "./playerModel";
 
 // Sync all models with the database
 (async () => {
   try {
-    await sequelize.sync();
+    await sqLite.sync();
     console.log("All models synced with the database");
   } catch (error) {
     console.error("Error syncing models:", error);

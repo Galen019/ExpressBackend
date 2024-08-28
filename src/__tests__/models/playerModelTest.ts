@@ -1,4 +1,4 @@
-import Player from "@models/playerModel";
+import Player from "models/playerModel";
 
 describe("Player Model", () => {
   it("playerModelTest", () => {

@@ -1,8 +1,8 @@
 import { DataTypes } from "sequelize";
-import sequelize from "../config/sequelize";
+import sqLite from "config/sequelize";
 
 // Define the User model
-const Player = sequelize.define("Player", {
+const Player = sqLite.define("Player", {
   name: {
     type: DataTypes.STRING,
     allowNull: false,
