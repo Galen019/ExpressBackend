@@ -1,8 +1,8 @@
 import { DataTypes } from 'sequelize';
-import sequelize from '../config/sequelize'; // Import the Sequelize instance
+import sequelize from '../config/sequelize';
 
 // Define the User model
-const User = sequelize.define('User', {
+const Player = sequelize.define('Player', {
     name: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -18,14 +18,4 @@ const User = sequelize.define('User', {
     },
 });
 
-// Sync the model with the database
-(async () => {
-    try {
-        await sequelize.sync();
-        console.log('User model synced with the database');
-    } catch (error) {
-        console.error('Error syncing User model:', error);
-    }
-})();
-
-export default User;
+export default Player;

@@ -1,4 +1,5 @@
 import express, { Request, Response } from 'express';
+import './models/syncModels';
 
 const app = express();
 const port = 3001;
