@@ -99,6 +99,16 @@ class PlayerRepository {
       this.handleError(error, "deleting player");
     }
   }
+
+  // Check if a player exists by name
+  async existsByName(name: string) {
+    try {
+      const player = await Player.findOne({ where: { name } });
+      return !!player;
+    } catch (error) {
+      this.handleError(error, "checking if player exists by name");
+    }
+  }
 }
 
 export default new PlayerRepository();

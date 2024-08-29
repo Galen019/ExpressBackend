@@ -1,3 +1,6 @@
+// Set environment variables
+process.env.NODE_ENV = "test";
+
 import sequelize from "config/sequelize";
 import "models/playerModel";
 
