@@ -1,4 +1,3 @@
-import { Op } from "sequelize";
 import Player from "models/playerModel";
 
 class PlayerRepository {
@@ -50,8 +49,7 @@ class PlayerRepository {
   // Get all players
   async getAllPlayers() {
     try {
-      const players = await Player.findAll();
-      return players;
+      return await Player.findAll();
     } catch (error) {
       this.handleError(error, "fetching players");
     }
