@@ -1,21 +1,33 @@
-import { DataTypes } from "sequelize";
-import sqLite from "config/sqLite";
+import { Model, DataTypes } from "sequelize";
+import sequelize from "config/sequelize";
 
-// Define the User model
-const Player = sqLite.define("Player", {
-  name: {
-    type: DataTypes.STRING,
-    allowNull: false,
+// Define the Player model
+class Player extends Model {
+  public id!: number;
+  public name!: string;
+  public isReady!: boolean;
+}
+
+// Initialize the Player model
+Player.init(
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
+      primaryKey: true,
+    },
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    isReady: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
   },
-  id: {
-    type: DataTypes.INTEGER,
-    primaryKey: true,
-    autoIncrement: true,
-  },
-  isReady: {
-    type: DataTypes.BOOLEAN,
-    defaultValue: false,
-  },
-});
+  {
+    sequelize, // Pass the sequelize instance
+  }
+);
 
 export default Player;

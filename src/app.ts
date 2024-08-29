@@ -1,13 +1,13 @@
-import express, { Request, Response } from 'express';
-import './models/syncModels';
+import express, { Request, Response } from "express";
+import "./models/syncModels";
 
 const app = express();
 const port = 3001;
 
-app.get('/', (req: Request, res: Response) => {
-    res.send('Hello World!');
+app.get("/", (req: Request, res: Response) => {
+  res.send("Galens Express Backend");
 });
 
 app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+  console.log(`Listening at http://localhost:${port}`);
 });

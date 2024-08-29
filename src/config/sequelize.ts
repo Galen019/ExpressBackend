@@ -4,10 +4,10 @@ import dotenv from "dotenv";
 dotenv.config(); // Load environment variables from .env file
 
 // Create a new Sequelize instance using SQLite in-memory
-const sqLite = new Sequelize({
+const sequelize = new Sequelize({
   dialect: "sqlite",
-  storage: ":memory:", // Use SQLite in-memory storage
+  storage: ":memory:",
 });
 
 // Export the Sequelize instance
-export default sqLite;
+export default sequelize;
