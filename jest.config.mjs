@@ -1,6 +1,7 @@
 export default {
     preset: 'ts-jest',
     testEnvironment: 'node',
+    verbose: true,
     moduleNameMapper: {
         '^models/(.*)$': '<rootDir>/src/models/$1',
         '^config/(.*)$': '<rootDir>/src/config/$1',

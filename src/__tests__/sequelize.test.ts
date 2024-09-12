@@ -8,7 +8,6 @@ import "models/playerModel";
 export const syncModels = async () => {
   try {
     await sequelize.sync();
-    console.log("All models synced with the database");
   } catch (error) {
     console.error("Error syncing models:", error);
   }

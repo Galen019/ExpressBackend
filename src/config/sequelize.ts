@@ -7,6 +7,7 @@ dotenv.config(); // Load environment variables from .env file
 const sequelize = new Sequelize({
   dialect: "sqlite",
   storage: ":memory:",
+  logging: false,
 });
 
 // Export the Sequelize instance

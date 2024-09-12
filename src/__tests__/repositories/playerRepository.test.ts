@@ -56,7 +56,7 @@ describe("PlayerRepository", () => {
     expect(player).toBeNull();
   });
 
-  it("should return true if the player exists", async () => {
+  test("should return true if the player exists", async () => {
     // Create a player
     await Player.create({ name: "John Doe" });
 
@@ -65,7 +65,7 @@ describe("PlayerRepository", () => {
     expect(exists).toBe(true);
   });
 
-  it("should return false if the player does not exist", async () => {
+  test("should return false if the player does not exist", async () => {
     // Check if a non-existent player exists
     const exists = await PlayerRepository.existsByName("Jane Doe");
     expect(exists).toBe(false);
